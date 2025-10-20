@@ -2,7 +2,7 @@
 
 int opcao;
 string modelo;
-List<Veiculo> veiculos = new List<Veiculo>();
+List<Carro> veiculos = new List<Carro>();
 List<Cliente> clientes = new List<Cliente>();
 List<Locacao> locacoes = new List<Locacao>();
 
@@ -22,18 +22,18 @@ void CadastrarVeiculo()
     {
         case 1:
             Console.Write("Número de portas: ");
-            int portas = int.Parse(Console.ReadLine()!);
-            v = new Carro(modelo, placa, preco, portas);
+            int portas = int.Parse(Console.ReadLine()!);    
+            veiculos.Add(modelo, placa, preco, portas);
             break;
         case 2:
             Console.Write("Cilindradas: ");
             int cilindradas = int.Parse(Console.ReadLine()!);
-            v = new Moto(modelo, placa, preco, cilindradas);
+            veiculos.Add(modelo, placa, preco, cilindradas);
             break;
         case 3:
             Console.Write("Capacidade de carga (toneladas): ");
             double carga = double.Parse(Console.ReadLine()!);
-            v = new Caminhao(modelo, placa, preco, carga);
+            veiculos.Add(modelo, placa, preco, carga);
             break;
         default:
             Console.WriteLine("Tipo inválido!");
@@ -42,7 +42,6 @@ void CadastrarVeiculo()
 }
 void CadastrarCliente()
 {
-    Cliente cliente = new Cliente();
     Console.Write("Nome do cliente: ");
     string nome = Console.ReadLine()!;
     Console.Write("CPF: ");

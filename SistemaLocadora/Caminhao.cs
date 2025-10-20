@@ -18,7 +18,7 @@ namespace SistemaLocadora
 
         public override void ExibirInformacoes()
         {
-            Console.WriteLine($"[Carro] {Modelo} - {CapacidadeCarga} tonrladas" +
+            Console.WriteLine($"[Carro] {Modelo} - {CapacidadeCarga} toneladas" +
                 $" - Placa: {Placa} -" +
                 $"R${PrecoDiaria:F2}/dia");
         }
