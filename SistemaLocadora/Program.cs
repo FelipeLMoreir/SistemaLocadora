@@ -96,7 +96,7 @@ void RegistrarLocacao()
     int dias = int.Parse(Console.ReadLine()!);
     Locacao loc = new Locacao(clientes[clienteIndex], veiculos[veiculoIndex], dias);
     locacoes.Add(loc);
-    Console.WriteLine(":marca_de_verificação_branca: Locação registrada com sucesso!");
+    Console.WriteLine("Locação registrada com sucesso!");
     Console.WriteLine($"Valor total: R${loc.CalcularValorTotal():F2}");
 }
 void ListarLocacoes()
