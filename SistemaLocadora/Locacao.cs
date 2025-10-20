@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaLocadora
 {
-    internal class Locacao
+    public class Locacao
     {
         public Cliente Cliente { get; set; }
         public Veiculo Veiculo { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaLocadora
 {
-    abstract class Cliente : Pessoa
+    public class Cliente : Pessoa
     {
         public Cliente(string nome, string cpf) : base(nome, cpf) 
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaLocadora
 {
-    abstract class Veiculo
+    public abstract class Veiculo
     {
         private string modelo { get; set; }
         private string placa { get; set; }
