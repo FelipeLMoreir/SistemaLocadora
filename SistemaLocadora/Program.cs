@@ -8,30 +8,30 @@ List<Locacao> locacoes = new List<Locacao>();
 
 void CadastrarVeiculo()
 {
-    Console.WriteLine("\n1 - Carro | 2 - Moto | 3 - Caminhão");
-    Console.Write("Escolha o tipo: ");
+    Console.WriteLine("\n1 - Carro\n2 - Moto\n3 - Caminhão");
+    Console.WriteLine("Escolha o tipo: ");
     int tipo = int.Parse(Console.ReadLine()!);
-    Console.Write("Modelo: ");
+    Console.WriteLine("Modelo: ");
     string modelo = Console.ReadLine()!;
-    Console.Write("Placa: ");
+    Console.WriteLine("Placa: ");
     string placa = Console.ReadLine()!;
-    Console.Write("Preço da diária: ");
+    Console.WriteLine("Preço da diária: ");
     double preco = double.Parse(Console.ReadLine()!);
     Veiculo v = null!;
     switch (tipo)
     {
         case 1:
-            Console.Write("Número de portas: ");
+            Console.WriteLine("Número de portas: ");
             int portas = int.Parse(Console.ReadLine()!);    
             veiculos.Add(new Carro(modelo, placa, preco, portas));
             break;
         case 2:
-            Console.Write("Cilindradas: ");
+            Console.WriteLine("Cilindradas: ");
             int cilindradas = int.Parse(Console.ReadLine()!);
             veiculos.Add(new Moto(modelo, placa, preco, cilindradas));
             break;
         case 3:
-            Console.Write("Capacidade de carga (toneladas): ");
+            Console.WriteLine("Capacidade de carga (toneladas): ");
             double carga = double.Parse(Console.ReadLine()!);
             veiculos.Add(new Caminhao(modelo, placa, preco, carga));
             break;
@@ -42,9 +42,9 @@ void CadastrarVeiculo()
 }
 void CadastrarCliente()
 {
-    Console.Write("Nome do cliente: ");
+    Console.WriteLine("Nome do cliente: ");
     string nome = Console.ReadLine()!;
-    Console.Write("CPF: ");
+    Console.WriteLine("CPF: ");
     string cpf = Console.ReadLine()!;
     clientes.Add(new Cliente(nome, cpf));
     Console.WriteLine("Cliente cadastrado!");
@@ -78,7 +78,7 @@ void RegistrarLocacao()
         Console.WriteLine("É necessário ter clientes e veículos cadastrados!");
         return;
     }
-    Console.WriteLine("\n--- Registrar Locação ---");
+    Console.WriteLine("\nRegistrar Locação");
     Console.WriteLine("Escolha o cliente:");
     for (int i = 0; i < clientes.Count; i++)
     {
